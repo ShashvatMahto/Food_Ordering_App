@@ -70,9 +70,9 @@ const Cart = () => {
                     {description.length > 138 && <span className='cursor-pointer font-semibold' onClick={handleClick}>{showMore ? " less" : "...show"}</span>}
                   </div>
                 </div>
-                <div className=' w-[30%] md:w-[20%] relative h-full'>
-                  <img src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/` + (imageId)} className='h-[144px] w-[165px] object-fit rounded-xl' alt="" />
-                  <button className='bg-red-500 text-lg text-white rounded-xl px-10 py-2 drop-shadow-sm  absolute bottom-[-13px] left-1 font-bold'
+                <div className=' w-[30%] md:w-[20%]  h-full relative  '>
+                  <img src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/` + (imageId)} className='h-[160px] w-[180px] object-fit rounded-xl ' alt="" />
+                  <button className='bg-red-500 text-lg text-white rounded-xl px-6 py-1 md:px-10 md:py-2 drop-shadow-sm  absolute bottom-1/5 font-bold bottom-[-15px] -left-0  md:left-2'
                     onClick={() => {
                       dispatch(deleteItem(indx))
 

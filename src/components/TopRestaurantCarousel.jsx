@@ -18,7 +18,7 @@ const TopRestaurant = ({ data ,title }) => {
 
   }
   return (
-    <div className='mt-14 '>
+    <div className='mt-16'>
 
       <div className='flex justify-between '>
         <h1 className='text-2xl font-bold'>{title}</h1>
