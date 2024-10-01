@@ -60,7 +60,7 @@ const Cart = () => {
                   <img className='w-5 rounded-sm' src={(vegClassifier === "VEG" ? veg : nonveg)} alt="" />
 
                   <h2 className='font-bold text-lg'>{name}</h2>
-                  <p>₹{price / 100 || defaultPrice / 100}</p>
+                  <p>₹ {price / 100 || defaultPrice / 100}</p>
                   <div className='flex items-center gap-1'>
                     <i className="fi fi-ss-star mt-1"></i>
                     <span>{rating ? rating : ""}({ratingCountV2 ? ratingCountV2 : ""})</span>
@@ -72,12 +72,7 @@ const Cart = () => {
                 </div>
                 <div className=' w-[30%] md:w-[20%] relative h-full'>
                   <img src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/` + (imageId)} className='h-[144px] w-[165px] object-fit rounded-xl' alt="" />
-                  <button className='bg-red-500 text-lg text-white rounded-xl px-10 py-2 drop-shadow-sm  absolute bottom-[-13px] left-1 font-bold'
-                    onClick={() => {
-                      dispatch(deleteItem(indx))
-
-                    }
-                    }>Remove</button>
+                 
                 </div>
               </div>
             )
