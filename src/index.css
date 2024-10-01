@@ -1,13 +1,46 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import "@flaticon/flaticon-uicons/css/all/all";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #FFF;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  padding: 44px;
+  opacity: 80%;
+  }
+
+  @keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+  } 
+
+
+  .animate{
+    animation-name: shimmer;
+    background-image: linear-gradient(to right top, #f4e2ef, #f1e6f3, #eeeaf5, #eeeef6, #eff1f6, #eff2f6, #f0f3f5, #f2f4f5, #f1f4f5, #f1f4f4, #f0f3f4, #f0f3f3);
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+
+    
+  }
+
+  @keyframes shimmer {
+    from{
+      background-position: -1000px 0;
+    }
+
+    to{
+      background-color: 1000px 0;
+    }
+  }
