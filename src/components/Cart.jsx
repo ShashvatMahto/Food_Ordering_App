@@ -72,7 +72,7 @@ const Cart = () => {
                 </div>
                 <div className=' w-[30%] md:w-[20%] relative h-full'>
                   <img src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/` + (imageId)} className='h-[144px] w-[165px] object-fit rounded-xl' alt="" />
-                  <button className='bg-red-500 text-lg text-white rounded-xl px-10 py-2 drop-shadow-sm  absolute bottom-[-13px] left-2 font-bold'
+                  <button className='bg-red-500 text-lg text-white rounded-xl px-10 py-2 drop-shadow-sm  absolute bottom-[-13px] left-1 font-bold'
                     onClick={() => {
                       dispatch(deleteItem(indx))
 
