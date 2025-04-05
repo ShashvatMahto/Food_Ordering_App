@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useCallback, useState } from 'react'
 
 const Carousel = ({data}) => {
   const [value, setvalue] = useState(0);
@@ -11,10 +11,11 @@ const Carousel = ({data}) => {
     
   }
 
-  const handlePrev = ()=>{
+  const handlePrev = useCallback(()=>{
+    console.log(value);
     if(value>0) setvalue(prev=> prev-18);
     
-  }
+  },[]);
   return (
     <div className='mt-24'>
        <div className='flex justify-between '>

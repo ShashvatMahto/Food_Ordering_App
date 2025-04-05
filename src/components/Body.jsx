@@ -36,11 +36,17 @@ const Body = () => {
 
       let TopResData = json?.data?.cards.find(data => data?.card?.card?.id === "top_brands_for_you")?.card?.card?.gridElements?.infoWithStyle?.restaurants;
 
-      let TopResData2 = json?.data?.cards.find(data => data?.card?.card?.id === "restaurant_grid_listing")?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+      console.log('1 data' , TopResData);
+      
+
+      let TopResData2 = json?.data?.cards?.find(data => data?.card?.card?.id === "restaurant_grid_listing_v2")?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+      // .find(data => data?.card?.card?.id === "restaurant_grid_listing")
+      // ?.card?.card?.gridElements?.infoWithStyle?.restaurants;
       console.log(TopResData2 );
+      console.log('2data' , TopResData2);
       
       let onYourMindData =  json?.data?.cards.find(data => data?.card?.card?.id === "whats_on_your_mind")?.card?.card?.gridElements?.infoWithStyle?.info;
-      console.log(onYourMindData);
+
       
       // setTopRestaurantCarouseldata(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
       setTopRestaurantCarouseldata(TopResData || TopResData2)
@@ -56,7 +62,9 @@ const Body = () => {
   }
 
 
-  const filterdData = TopRestaurantCarouseldata.filter((curr) => {
+  const filterdData = TopRestaurantCarouseldata?.filter((curr) => {
+    console.log('enter');
+    
     if (!filterVal) return true;
 
     switch (filterVal) {
@@ -88,7 +96,7 @@ const Body = () => {
   }, [lat, lng])
 
 
-  if(TopRestaurantCarouseldata.length===0) return <Shimmer/>
+  if(TopRestaurantCarouseldata?.length===0) return <Shimmer/>
   return (
     <div className='w-full'>
       <div className=' w-full px-10 sm:w-[90%]  lg:w-[80%]   mx-auto mt-3 overflow-hidden'>

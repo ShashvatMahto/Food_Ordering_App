@@ -68,3 +68,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+// so i basically created a food ordereing app using swiggy's api and  i have used that api to rendere restuarants and on clicking on each resturant we are redirected to their menu where i have rendered the menu of each resutuarant based on categories , they are displayed in the form of accordian. and ofcourse there is a feature of add to cart when we click on that the item gets added to that cart , but there is a catch here , supposes we have already added some items in our cart and then we are trying to add items from a different resturant , then we will recieve a popup saying "items from a diffrent restuarant" . just like swiggy and i have also added the search functionality 
